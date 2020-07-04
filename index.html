@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>UFOs</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+<link href="static/css/bootstrap.css" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="../static/css/LJBM.css" /> -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="static/css/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header of the Page -->
+    <header class="header">
+        <h1 class="head-h1">UFO</h1>
+        <H2 class="head-p">Have you seen the...Aliens?</H2>     
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <div class="form-group">
+            <div class="buttons">
+              <button id="refresh" class="btn btn-primary bg-dark">Load All Data</button>
+            </div>
+            <div class='search-fields'>
+              <small id="help">Enter start Date</small>
+              <input type="text" class="form-control form-control-sm text-light bg-dark" list="date_list" id="date-start" placeholder="Start Date"/>
+                <datalist id="date_list"></datalist>
+            </div>
+            <!-- <div class='search-fields'>
+                <input type="text" class="form-control form-control-sm text-light bg-dark" list="date_list" id="date-end" placeholder="End Date"/>
+                <datalist id="date_list"></datalist>
+                <small id="help">Enter end Date</small>
+            </div> -->
+            <div class="search-fields">
+              <small id="help">Enter City</small>
+              <input type="text" class="form-control form-control-sm text-light bg-dark" list="city_list" id="city" placeholder="City"/>
+                <datalist id="city_list"></datalist>
+            </div>
+            <div class='search-fields'>
+              <small id="help">Enter State</small>  
+              <input type="text" class="form-control form-control-sm text-light bg-dark" list="state_list" id="state" placeholder="State"/>
+                <datalist id="state_list"></datalist>
+            </div>
+            <div class='search-fields'>
+              <small id="help">Enter Country</small>
+              <input type="text" class="form-control form-control-sm text-light bg-dark" list="country_list" id="country" placeholder="Country"/>
+                <datalist id="country_list"></datalist>
+            </div>
+            <div class="buttons">
+                <button id="search" class="btn btn-primary bg-dark">Search</button>
+            </div>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <h2>Section title</h2>
+          <div class="table-responsive">
+            <body onload="generateDynamicTable()"></body>
+            <!-- Div element to display result -->
+              <div id="tableData">
+                <p>No se estan reflejando los datos</p>
+              </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+
+  </body>
+</html>
